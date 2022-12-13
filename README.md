@@ -1,6 +1,6 @@
-# jsonutils
+# jsonutil
 
-jsonutils is a small Go package that provides utility types for working with JSON data following the convention used at Digital Core CI.
+jsonutil is a small Go package that provides utility types for working with JSON data following the convention used at Digital Core CI.
 It includes types for representing JSON errors and responses, as well as constant error codes for common error cases.
 
 ## Example of our JSON convention
