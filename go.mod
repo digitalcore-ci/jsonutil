@@ -1,3 +1,3 @@
-module github.com/digitalcore-ci/jsonutils~
+module github.com/digitalcore-ci/jsonutil
 
 go 1.19

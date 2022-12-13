@@ -1,9 +1,9 @@
-package jsonutils
+package jsonutil
 
-type JSONResponse map[string]interface{}
+type Response map[string]interface{}
 
-func SuccessResponse(objectName string, object interface{}) JSONResponse {
-	return JSONResponse{
+func SuccessResponse(objectName string, object interface{}) Response {
+	return Response{
 		objectName: object,
 	}
 }
