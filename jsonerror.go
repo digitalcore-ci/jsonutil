@@ -18,37 +18,32 @@ func (e Error) Error() string {
 
 // InternalServerError returns an Unknow Error whithout error details
 func InternalServerError() *Error {
-	return Unknown("Internal Server Error")
+	return UnknownError("Internal Server Error")
 }
 
 // Unknown is an unexpected error
-func Unknown(msg string) *Error {
+func UnknownError(msg string) *Error {
 	return &Error{"UNKNOWN_ERROR", msg}
 }
 
 // Forbidden is an error when the client tries to access a resource
 // they are not allowed to access.
-func Forbidden(msg string) *Error {
+func ForbiddenError(msg string) *Error {
 	return &Error{"FORBIDDEN", msg}
 }
 
 // BadJSON is an error when the client supplies malformed JSON.
-func BadJSON(msg string) *Error {
+func BadJSONError(msg string) *Error {
 	return &Error{"BAD_JSON", msg}
-}
-
-// BadAlias is an error when the client supplies a bad alias.
-func BadAlias(msg string) *Error {
-	return &Error{"BAD_ALIAS", msg}
 }
 
 // NotJSON is an error when the client supplies something that is not JSON
 // to a JSON endpoint.
-func NotJSON(msg string) *Error {
+func NotJSONError(msg string) *Error {
 	return &Error{"NOT_JSON", msg}
 }
 
 // NotFound is an error when the client tries to access an unknown resource.
-func NotFound(msg string) *Error {
+func NotFoundError(msg string) *Error {
 	return &Error{"NOT_FOUND", msg}
 }
