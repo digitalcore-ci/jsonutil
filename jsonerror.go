@@ -38,7 +38,7 @@ func FileNotFoundError(msg string) *Error {
 // has attempted to upload a file that exceeds this limit.
 // The error message could include the maximum allowed file size
 func MaxFileSizeExcedeedError(msg string) *Error {
-	return &Error{"FILE_SIZE_EXCEEDED", msg}
+	return &Error{"MAX_FILE_SIZE_EXCEEDED", msg}
 }
 
 // Unknown is an unexpected error
