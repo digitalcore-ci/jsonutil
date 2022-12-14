@@ -21,6 +21,26 @@ func InternalServerError() *Error {
 	return UnknownError("Internal Server Error")
 }
 
+// InvalidContentTypeError is an error when the type of content being uploaded
+// is not allowed by the server.
+func InvalidContentTypeError(msg string) *Error {
+	return &Error{"INVALID_CONTENT_TYPE", msg}
+}
+
+// FileNotFoundError is an error when client is requesting a file
+// that is not found on the server
+func FileNotFoundError(msg string) *Error {
+	return &Error{"FILE_NOT_FOUND", msg}
+}
+
+// MaxFileSizeExcedeedError is an error when used when
+// the API enforces a maximum file size limit and the user
+// has attempted to upload a file that exceeds this limit.
+// The error message could include the maximum allowed file size
+func MaxFileSizeExcedeedError(msg string) *Error {
+	return &Error{"FILE_SIZE_EXCEEDED", msg}
+}
+
 // Unknown is an unexpected error
 func UnknownError(msg string) *Error {
 	return &Error{"UNKNOWN_ERROR", msg}
